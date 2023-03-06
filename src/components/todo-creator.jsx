@@ -8,15 +8,16 @@ export function FormCreator({ createTodo }) {
     const todoTitle = form.todoTitle;
     createTodo(todoTitle.value);
     console.log(event);
+    form.reset();
   }
 
   return (
     <div className="todo-form">
       <label> Todo creator </label>
       <form onSubmit={sumbitTheForm}>
-        <div>
-          <input type="text" name="todoTitle" placeholder="Add todo" />
-          <button type="submit">Add</button>
+        <div className="d-flex form-group">
+          <input type="text" name="todoTitle" placeholder="Add todo" className="form-control me-2"/>
+          <button type="submit" className="btn btn-primary">Add</button>
         </div>
       </form>
     </div>

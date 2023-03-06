@@ -5,3 +5,7 @@
 .todo__item {
   color: red;
 }
+.done__item {
+  margin: 1rem 0;
+  color: lime;
+}
